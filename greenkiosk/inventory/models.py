@@ -6,7 +6,6 @@ class Product (models.Model):
     price =models.DecimalField(max_digits=8,
     decimal_places=2)
     stock=models.PositiveIntegerField()
-    image=models.PositiveIntegerField()
     image=models.ImageField()
     description=models.TextField()
     date_created=models.TextField()
