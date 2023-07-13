@@ -42,7 +42,14 @@ INSTALLED_APPS = [
     'review',
     'Accountregistration',
     'order',
-    'payments'
+    'payments',
+    'Notifications',
+    'Discount',
+    'refund',
+    'Search_engine',
+    'vendors',
+    'customer',
+    
 ]
 
 
