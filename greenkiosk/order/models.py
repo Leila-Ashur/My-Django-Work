@@ -1,6 +1,7 @@
 from django.db import models
 from customer.models import Customer
-from shoppingcart.models import Shoppingcart
+from Delivery.models import Delivery
+from Shoppingcart.models import Shoppingcart
 
 # Create your models here.
 class Orders (models.Model):
@@ -11,6 +12,7 @@ class Orders (models.Model):
 
 
    customer =models.ForeignKey(Customer,null=True,on_delete=models.CASCADE)
+   delivery= models.OneToOneField(Delivery,null=True, on_delete=models.CASCADE)
    shoppingcart =models.ManyToManyField(Shoppingcart)
 
 
