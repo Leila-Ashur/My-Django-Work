@@ -11,7 +11,7 @@ class Orders (models.Model):
 
 
    customer =models.ForeignKey(Customer,null=True,on_delete=models.CASCADE)
-   shoppingcart=models.ForeignKey(Shoppingcart,null=True,on_delete=models.CASCADE)
+   shoppingcart =models.ManyToManyField(Shoppingcart)
 
 
     

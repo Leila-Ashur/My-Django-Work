@@ -4,14 +4,13 @@ from inventory.models import Product
 # Create your models here.
 
 class Shoppingcart (models.Model):
-    Product=models.ManyToManyField(Product)
+    product=models.ManyToManyField(Product)
     name=models.CharField(max_length=32)
     price =models.DecimalField(max_digits=8, decimal_places=2)
     image=models.ImageField()
-    total_price=models.DecimalField(max_digits=8,
-    decimal_places=2)
+    total_price=models.DecimalField(max_digits=8,decimal_places=2)
     quantity=models.IntegerField()
     
-    def __str__(self) :
-        return self.name
+    # def __str__(self) :
+    #     return self.name
 
