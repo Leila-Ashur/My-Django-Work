@@ -1,10 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Register
-class RegisterAdmin(admin.ModelAdmin):
-    list_display=("Firstname","Lastname","Email","Phone_number")
+from .models import Accountregistration
+class AccountregistrationAdmin(admin.ModelAdmin):
+    list_display=("first_name","last_name","email","phone_number","password")
     
-admin.site.register(Register,RegisterAdmin)
-
-
+admin.site.register(Accountregistration,AccountregistrationAdmin)

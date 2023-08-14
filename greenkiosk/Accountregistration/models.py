@@ -1,14 +1,12 @@
 from django.db import models
 
 # Create your models here.
-class Register (models.Model):
-   Firstname=models.CharField(max_length=32)
-   Lastname=models.CharField(max_length=32)
-   Password=models.CharField(max_length=15)
-   Email=models.EmailField()
-   Phone_number=models.CharField(max_length=10)
-
-
+class Accountregistration(models.Model):
+   first_name=models.CharField(max_length=32)
+   last_name=models.CharField(max_length=32)
+   password=models.CharField(max_length=15)
+   email=models.EmailField()
+   phone_number=models.CharField(max_length=10)
     
 def __str__(self) :
-    return self.name
+    return self.first_name

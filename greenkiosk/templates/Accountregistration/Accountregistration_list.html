@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accountregistration List</title>
+</head>
+<body>
+    <h3>Accountregistration List</h3>
+    <table>
+        <tr>
+            <th>first_name</th>
+            <th>last_name</th>
+            <th>password</th>
+            <th>email</th>
+            <th>phone_number</th>
+        </tr>
+        {% for account_registration in account_registrations %}
+        <tr>
+            <td>{{ account_registration.first_name }}</td>
+            <td>{{ account_registration.last_name }}</td>
+            <td>{{ account_registration.password }}</td>
+            <td>{{ account_registration.email }}</td>
+            <td>{{ account_registration.phone_number }}</td>
+            <td><a href="{% url 'Accountregistration_detail_view' account_registration.id %}">View Accountregistration</a></td>
+            <td><a href="{% url 'edit_Accountregistration_view' account_registration.id %}">Edit Accountregistration</a></td>            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

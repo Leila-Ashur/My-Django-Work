@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> Accountregistration List</h3>
+    <table>
+        <th>
+            <td>first_name</td>
+            <td>last_name</td>
+            <td>password</td>
+            <td>email</td>
+            <td>phone_number</td>
+        </th>
+        {%for Accountregistration in  Accountregistration%}
+        <tr>
+            <td>{{ Accountregistration.first_name}}</td>
+            <td>{{ Accountregistration.last_name}}</td>
+            <td>{{ Accountregistration.password}}</td>
+            <td>{{ Accountregistration.email}}</td>
+            <td>{{ Accountregistration.phone_number}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
