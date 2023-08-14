@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Discount List</h3>
+    <table>
+        <th>
+            <td>code</td>
+            <td>percantage</td>
+            <td>expiry_date</td>
+            
+        </th>
+        {%for Discount in Discount%}
+        <tr>
+            <td>{{Discount.code}}</td>
+            <td>{{Discount.percantage}}</td>
+            <td>{{Discount.expiry_date}}</td>
+           
+            <td><a href="{% url 'Discount_detail_view' id=Discount.id%}">View Discount</a></td>
+            <td><a href="{% url 'edit_Discount_view' id=Discount.id %}">Edit Discount</a> </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+
+
+
+</body>
+</html>
+

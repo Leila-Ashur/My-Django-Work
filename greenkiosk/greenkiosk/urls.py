@@ -23,6 +23,11 @@ urlpatterns = [
     path("Accountregistration/",include("Accountregistration.urls")),
     path("Delivery/",include("Delivery.urls")),
     path("customer/",include("customer.urls")),
+    path("Discount/",include("Discount.urls")),
+    path("Notifications/",include("Notifications.urls")),
+    path("order/",include("order.urls")),
+    path("Shoppingcart/",include("Shoppingcart")),
+
 
 
 ]

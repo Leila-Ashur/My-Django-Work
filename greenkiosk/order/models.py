@@ -1,10 +1,7 @@
 from django.db import models
-from customer.models import Customer
-from Delivery.models import Delivery
-from Shoppingcart.models import Shoppingcart
 
 # Create your models here.
-class Orders (models.Model):
+class Order(models.Model):
    Order_status=models.CharField(max_length=32)
    Item=models.CharField(max_length=32)
    Customer_information=models.CharField(max_length=15)
