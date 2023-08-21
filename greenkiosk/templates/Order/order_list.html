@@ -17,13 +17,13 @@
             <td>Amount</td>
 
         </th>
-        {%for order in order%}
+        {%for order in orders%}
         <tr>
             <td>{{order.Order_Status}}</td>
             <td>{{order.Customer_information}}</td>
             <td>{{order.Item}}</td>
             <td>{{order.Amount}}</td>
-            <td><a href="{% url 'order_upload' id=order.id%}">View order</a></td>
+            <td><a href="{% url 'order_detail_view' id=order.id%}">View order</a></td>
             <td><a href="{% url 'edit_order_view' id=order.id %}">Edit order</a> </td>
         </tr>
         {% endfor %}

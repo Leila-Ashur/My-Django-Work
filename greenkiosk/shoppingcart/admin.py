@@ -4,9 +4,9 @@ from .models import Shoppingcart
 
 # Register your models here.
 
-class ShoppingAdmin(admin.ModelAdmin):
+class ShoppingcartAdmin(admin.ModelAdmin):
     list_display=("name","quantity","price","total_price")
     
-admin.site.register(Shoppingcart,ShoppingAdmin)
+admin.site.register(Shoppingcart,ShoppingcartAdmin)
 
 

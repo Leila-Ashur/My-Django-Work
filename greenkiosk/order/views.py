@@ -1,18 +1,21 @@
 from django.shortcuts import render, redirect
-from .forms import OrderUploadForm  # Correct the import path here
+from .forms import OrderUploadForm
 from order.models import Order
+
+
 
 def order_upload(request):
     form = OrderUploadForm()
-    return render(request, "order/order_upload.html", {"form": form})
+    return render(request, "Order/order_upload.html", {"form": form})
+
 
 def order_list(request):
-    orders = Order.objects.all() 
-    return render(request, "order/order_list.html", {"orders": orders})
+    orders = Order.objects.all()
+    return render(request, "Order/order_list.html", {"orders": orders})
 
 def order_detail_view(request, id):
     order = Order.objects.get(id=id)  
-    return render(request, "order/order_detail.html", {"order": order})
+    return render(request, "Order/order_detail.html", {"order": order})
 
 def edit_order_view(request, id):
     order = Order.objects.get(id=id)
@@ -24,3 +27,6 @@ def edit_order_view(request, id):
     else:
         form = OrderUploadForm(instance=order)
     return render(request, 'edit_order.html', {'form': form})
+
+
+

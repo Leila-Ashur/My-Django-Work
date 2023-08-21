@@ -9,7 +9,7 @@ class Product (models.Model):
     stock=models.PositiveIntegerField()
     image=models.ImageField()
     description=models.TextField()
-    date_created=models.TextField()
-    data_created=models.DateTimeField(auto_now_add=True)
+    # date_created=models.TextField()
+    # data_created=models.DateTimeField(auto_now_add=True)
     date_updated=models.DateTimeField(auto_now=True)
 
