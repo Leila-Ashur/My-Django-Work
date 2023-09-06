@@ -1,5 +1,6 @@
 from django.urls import path
 from.views import product_detail_view,product_upload,product_list,edit_product_view
+from .views import product_detail_view
 
 urlpatterns=[
     path("products/upload/",product_upload,name="product_upload_view"),

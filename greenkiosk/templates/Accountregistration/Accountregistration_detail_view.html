@@ -3,28 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Customer Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .customer-details {
+            max-width: 400px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .customer-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .success-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2ecc71;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .success-btn:hover {
+            background-color: #27ae60;
+        }
+    </style>
 </head>
 <body>
-    <h3> Accountregistration List</h3>
-    <table>
-        <th>
-            <td>first_name</td>
-            <td>last_name</td>
-            <td>password</td>
-            <td>email</td>
-            <td>phone_number</td>
-        </th>
-        {%for Accountregistration in  Accountregistration%}
-        <tr>
-            <td>{{ Accountregistration.first_name}}</td>
-            <td>{{ Accountregistration.last_name}}</td>
-            <td>{{ Accountregistration.password}}</td>
-            <td>{{ Accountregistration.email}}</td>
-            <td>{{ Accountregistration.phone_number}}</td>
-        </tr>
-        {% endfor %}
-    </table>
-
+    <div class="customer-details">
+        <img class="customer-image" src="{{customer.image.url}}" alt="Customer Image">
+        <p>First Name: {{customer.first_name}}</p>
+        <p>Last Name: {{customer.last_name}}</p>
+        <p>Email: {{customer.email}}</p>
+        <p>Phone: {{customer.phone}}</p>
+        <p>Password: {{customer.password}}</p>
+        <button class="success-btn">Successfully</button>
+    </div>
 </body>
 </html>

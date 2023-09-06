@@ -28,9 +28,9 @@ def edit_product_view(request, id):
         if form.is_valid():
             form.save()
             return redirect('product_detail_view', id=product.id)
-    else:
-        form = ProductUploadForm(instance=product)   
-    return render(request, 'edit_product.html', {'form': form})
+        else:
+            form = ProductUploadForm(instance=product)
+            return render(request,'edit_product.html', {'form': form})
 
 
 

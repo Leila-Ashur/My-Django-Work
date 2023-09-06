@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'vendors',
     'customer',
     'Delivery',
+    'rest_framework',
 ]
 
 

@@ -7,7 +7,7 @@ class Product (models.Model):
     name=models.CharField(max_length=32)
     price =models.DecimalField(max_digits=8,decimal_places=2)
     stock=models.PositiveIntegerField()
-    image=models.ImageField()
+    image=models.ImageField(upload_to="images")
     description=models.TextField()
     # date_created=models.TextField()
     # data_created=models.DateTimeField(auto_now_add=True)
